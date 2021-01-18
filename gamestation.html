@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Station</title>
+    <style>
+a {
+  text-decoration: none;
+  color:  #dbedf3;;
+}
+body {
+  background-color: #283149 ;
+}
+img {
+  height: 475px;
+  width: 475px;
+  border-radius: 75px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 50px auto;
+  height: 475px;
+  width: 475px;
+  background: white;
+  border-radius: 75px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+  
+}
+
+div:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+div:hover::before, div:hover::after {
+  display: block;
+  content: '';
+  position: absolute;
+  height: 475px;
+  width: 475px;
+  background: #00818a;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 2s clockwise infinite;
+}
+
+div:hover:after {
+  background: #dbedf3;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -13px;
+    left: 0;
+  }
+  12% {
+    top: -5px;
+    left: 5px;
+  }
+  25% {
+    top: 0;
+    left: 13px;    
+  }
+  37% {
+    top: 5px;
+    left: 5px;
+  }
+  50% {
+    top: 13px;
+    left: 0;    
+  }
+  62% {
+    top: 5px;
+    left: -5px;
+  }
+  75% {
+    top: 0;
+    left: -13px;
+  }
+  87% {
+    top: -5px;
+    left: -5px;
+  }
+  100% {
+    top: -13px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -13px;
+    right: 0;
+  }
+  12% {
+    top: -5px;
+    right: 5px;
+  }
+  25% {
+    top: 0;
+    right: 13px;    
+  }
+  37% {
+    top: 5px;
+    right: 5px;
+  }
+  50% {
+    top: 13px;
+    right: 0;    
+  }
+  62% {
+    top: 5px;
+    right: -5px;
+  }
+  75% {
+    top: 0;
+    right: -13px;
+  }
+  87% {
+    top: -5px;
+    right: -5px;
+  }
+  100% {
+    top: -13px;
+    right: 0;    
+  }
+}
+
+p {
+  color: #dbedf3;
+  font-family: Courier;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  width: 340px;
+  height: 80px;
+  background: #404b69;
+  border-radius: 75px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+}
+
+p:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+p:hover::before, p:hover::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 340px;
+  height: 80px;
+  background: #dbedf3;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 2s clockwise infinite;
+}
+
+p:hover:after {
+  background: #00818a;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -13px;
+    left: 0;
+  }
+  12% {
+    top: -5px;
+    left: 5px;
+  }
+  25% {
+    top: 0;
+    left: 13px;    
+  }
+  37% {
+    top: 5px;
+    left: 5px;
+  }
+  50% {
+    top: 13px;
+    left: 0;    
+  }
+  62% {
+    top: 5px;
+    left: -5px;
+  }
+  75% {
+    top: 0;
+    left: -13px;
+  }
+  87% {
+    top: -5px;
+    left: -5px;
+  }
+  100% {
+    top: -13px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -13px;
+    right: 0;
+  }
+  12% {
+    top: -5px;
+    right: 5px;
+  }
+  25% {
+    top: 0;
+    right: 13px;    
+  }
+  37% {
+    top: 5px;
+    right: 5px;
+  }
+  50% {
+    top: 13px;
+    right: 0;    
+  }
+  62% {
+    top: 5px;
+    right: -5px;
+  }
+  75% {
+    top: 0;
+    right: -13px;
+  }
+  87% {
+    top: -5px;
+    right: -5px;
+  }
+  100% {
+    top: -13px;
+    right: 0;    
+  }
+}
+
+strong {
+  color: #dbedf3;
+  font-family: Courier;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  width: 450px;
+  height: 70px;
+  background: #404b69;
+  border-radius: 20px;
+  
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+  padding: 15px;
+}
+
+strong:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+strong:hover::before, strong:hover::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 450px;
+  height: 70px;
+  background: #dbedf3;
+  border-radius: 15px;
+  z-index: -1;
+  padding: 15px;
+  animation: 2s clockwise infinite;
+}
+
+strong:hover:after {
+  background: #00818a;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -13px;
+    left: 0;
+  }
+  12% {
+    top: -5px;
+    left: 5px;
+  }
+  25% {
+    top: 0;
+    left: 13px;    
+  }
+  37% {
+    top: 5px;
+    left: 5px;
+  }
+  50% {
+    top: 13px;
+    left: 0;    
+  }
+  62% {
+    top: 5px;
+    left: -5px;
+  }
+  75% {
+    top: 0;
+    left: -13px;
+  }
+  87% {
+    top: -5px;
+    left: -5px;
+  }
+  100% {
+    top: -13px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -13px;
+    right: 0;
+  }
+  12% {
+    top: -5px;
+    right: 5px;
+  }
+  25% {
+    top: 0;
+    right: 13px;    
+  }
+  37% {
+    top: 5px;
+    right: 5px;
+  }
+  50% {
+    top: 13px;
+    right: 0;    
+  }
+  62% {
+    top: 5px;
+    right: -5px;
+  }
+  75% {
+    top: 0;
+    right: -13px;
+  }
+  87% {
+    top: -5px;
+    right: -5px;
+  }
+  100% {
+    top: -13px;
+    right: 0;    
+  }
+}
+h1 {
+  font-size: 60px;
+  font-family:Courier;
+  text-align: center;
+  margin: 150px;
+  color: #00818a;
+}
+</style>
+
+</style>
+</head>
+<body>
+
+    <h1>Game Station</h1>
+
+    <div><img src="https://i.pinimg.com/564x/fd/9a/cd/fd9acd3d4811218facd977276c7fdc0e.jpg"></div>
+    <p><a href="https://progenei.github.io/snakegame.github.io/">Snake Game</a></p>
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    
+    <div><img src="https://cdn.lowgif.com/full/28d3f3ff02985760-.gif"></div>
+    <p><a href="https://progenei.github.io/fluppystar.github.io/">Fluppy "Star" Game</a></p>
+    <br>
+    <br>
+    <br>
+    
+    
+    <div><img src="https://i.pinimg.com/originals/19/72/d2/1972d2ad3b5f8d176c6f70428afb02e0.gif"></div>
+    <p><a href = "https://progenei.github.io/jump.github.io/">Dinosaur Jump Game</a></p>
+    <br>
+    <br>
+    <br>
+    
+    
+    <div><img src="https://i.pinimg.com/564x/71/59/01/71590122a5bf00073e2e4f4c5a12d413.jpg"></div>
+    <p><a href = "https://progenei.github.io/realfallgame.github.io/">Falling Ball Game</a></p>
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    <div><img src="https://i.pinimg.com/originals/24/cb/e2/24cbe2485192137bf05e7bc319793d1a.gif"></div>
+    <p><a href = "https://progenei.github.io/pong.github.io/">Pong Game</a></p>
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    <div><img src="https://data.whicdn.com/images/337531148/original.gif"></div>
+    <p><a href = "https://progenei.github.io/flipcard.github.io/">Matching Cards Game</a></p>
+    <br>
+    <br>
+    <br>
+    
+    <div><img src="https://i.gifer.com/D9i3.gif"></div>
+    <p><a href = "https://progenei.github.io/ballcrab.github.io/">Brick Breaker Game</a></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <strong class= "lol">Ghadeer hope for all of you the best :)</strong>
+    <br>
+    <br>
+    <br>
+    </body>
+    </html>
